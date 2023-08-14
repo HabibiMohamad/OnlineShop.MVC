@@ -1,6 +1,6 @@
 ﻿namespace ApplicationLayer.Dtos.ProductCategoryDtos
 {
-    public class Create_ProductCategoryDto
+    public class Detail_ProductCategoryDetailDto
     {
         public int Id { get; set; }
         public string Title { get; set; }

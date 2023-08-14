@@ -15,6 +15,7 @@ namespace ApplicationLayer.UseCases.Implementations
             _repository = repository;
 
         }
+        
         public List<GetAllForGrid_ProductCategoryDto> GetAllForGrid()
         {
             List<ProductCategory> productCategories = _repository.GetAll();
@@ -28,16 +29,16 @@ namespace ApplicationLayer.UseCases.Implementations
             }
             return listDto;        
         }
-        public Detail_ProductCategoryDto Detail(int id)
+        public Detail_ProductCategoryDetailDto Detail(int id)
         {
             var productCategory = _repository.GetById(id);
-            var dto= new Detail_ProductCategoryDto();
+            var dto= new Detail_ProductCategoryDetailDto();
             dto.Id = productCategory.Id;
             dto.Title = productCategory.Title;
             dto.Description = productCategory.Description;
             return dto;
         }
-        public void Create(Create_ProductCategoryDto dto)
+        public void Create(Create_PrductCategoryDto dto)
         {
             var productCategory=new ProductCategory();
             productCategory.Id = dto.Id;
@@ -54,6 +55,10 @@ namespace ApplicationLayer.UseCases.Implementations
             _repository.Update(productCategory);
         }
 
+        public List<GetAllForGrid_ProductCategoryDto> GetAllForGrid(int id)
+        {
+            throw new NotImplementedException();
+        }
     }
 
 }
