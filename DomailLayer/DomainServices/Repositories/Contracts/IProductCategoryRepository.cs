@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DomailLayer.DomainServices.Repositories.Contracts
 {
-    internal interface IProductCategoryRepository
+    public interface IProductCategoryRepository
     {
         public List<ProductCategory> GetAll();
         public ProductCategory GetById(int id);
