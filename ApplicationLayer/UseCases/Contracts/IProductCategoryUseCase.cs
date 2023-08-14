@@ -8,5 +8,6 @@ namespace ApplicationLayer.UseCases.Contracts
 {
     public interface IProductCategoryUseCase
     {
+
     }
 }
