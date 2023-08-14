@@ -6,7 +6,14 @@ using System.Threading.Tasks;
 
 namespace DomailLayer.Domain
 {
-    internal class ProductCategory
+    // Many
+    public class ProductCategory
     {
+        public int Id { get; set; }
+        public string Title { get; set; }
+        public string Description { get; set; }
+
+        public ICollection<Product> products { get; set; }
+
     }
 }
