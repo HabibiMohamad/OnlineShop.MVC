@@ -11,14 +11,14 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03-InfrastructureLayer", "0
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04-PressentationLayer", "04-PressentationLayer", "{4A8E73DA-D276-4C17-964F-46CF14C78A18}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DomailLayer", "DomailLayer\DomailLayer.csproj", "{71586C67-B23C-441E-9B15-00C92AF81219}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DomainLayer", "DomailLayer\DomainLayer.csproj", "{71586C67-B23C-441E-9B15-00C92AF81219}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{26410CDE-04F7-4F67-AF26-33D3433DDBE2}"
 	ProjectSection(SolutionItems) = preProject
 		Soal.txt = Soal.txt
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApplicationLayer", "ApplicationLayer\ApplicationLayer.csproj", "{7C84E291-2852-4C4D-8A42-EDBCC61A0393}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApplicationLayer", "ApplicationLayer\ApplicationLayer.csproj", "{7C84E291-2852-4C4D-8A42-EDBCC61A0393}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
