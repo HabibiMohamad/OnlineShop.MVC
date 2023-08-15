@@ -1,4 +1,4 @@
-﻿namespace ApplicationLayer.UseCases.Contracts
+﻿namespace ApplicationLayer.Dtos.ProductCategoryDtos
 {
     public class Create_PrductCategoryDto
     {
