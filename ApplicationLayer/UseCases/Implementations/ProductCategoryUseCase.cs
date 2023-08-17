@@ -39,7 +39,7 @@ namespace ApplicationLayer.UseCases.Implementations
             dto.Description = productCategory.Description;
             return dto;
         }
-        public void Create(Create_PrductCategoryDto dto)
+        public void Create(Create_ProductCategoryDto dto)
         {
             var productCategory=new ProductCategory();
             productCategory.Id = dto.Id;
