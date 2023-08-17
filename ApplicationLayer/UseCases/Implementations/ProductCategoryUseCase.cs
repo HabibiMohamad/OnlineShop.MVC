@@ -30,6 +30,7 @@ namespace ApplicationLayer.UseCases.Implementations
             }
             return listDto;        
         }
+
         public Detail_ProductCategoryDetailDto Detail(int id)
         {
             var productCategory = _repository.GetById(id);
@@ -56,7 +57,10 @@ namespace ApplicationLayer.UseCases.Implementations
             _repository.Update(productCategory);
         }
 
-        
+        public List<GetAllForGrid_ProductCategoryDto> GetAllForGrid(int id)
+        {
+            throw new NotImplementedException();
+        }
     }
 
 }

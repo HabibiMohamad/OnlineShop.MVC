@@ -11,7 +11,8 @@ namespace ApplicationLayer.UseCases.Contracts
     {
         void Create(Create_PrductCategoryDto dto);
         Detail_ProductCategoryDetailDto Detail (int  id);
-        List<GetAllForGrid_ProductCategoryDto> GetAllForGrid ();
+        List<GetAllForGrid_ProductCategoryDto> GetAllForGrid();
+        List<GetAllForGrid_ProductCategoryDto> GetAllForGrid(int id);
         void Update(Uppdate_ProductCategoyDto dto);
     }
 }
