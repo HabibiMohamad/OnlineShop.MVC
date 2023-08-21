@@ -61,5 +61,9 @@ namespace ApplicationLayer.UseCases.Implementations
             product.Price = dto.Price;
             _repository.Update(product);
         }
+        public void Delete(int id)
+        {
+            _repository.Remove(id);
+        }
     }
 }

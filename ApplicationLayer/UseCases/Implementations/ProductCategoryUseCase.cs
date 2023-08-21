@@ -56,7 +56,10 @@ namespace ApplicationLayer.UseCases.Implementations
             _repository.Update(productCategory);
         }
 
-        
+        public void Delete(int id)
+        {
+            _repository.Remove(id);
+        }
     }
 
-}
+} 

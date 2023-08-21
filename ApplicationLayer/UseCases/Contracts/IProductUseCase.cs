@@ -13,5 +13,6 @@ namespace ApplicationLayer.UseCases.Contracts
         Detail_ProductDetailDto Detail(int id);
         List<GetAllForGrid_ProductDto> GetAllForGrid();
         void Update(Uppdate_ProductDto dto);
+        void Delete(int id);
     }
 }
