@@ -1,12 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using DomailLayer.Domain;
+using Microsoft.EntityFrameworkCore;
 
 namespace InfrastructureLayer
 {
-    public class OnlineShopDbContext:DbContext
+    public class OnlineShopDbContext : DbContext
     {
+        public OnlineShopDbContext(DbContextOptions options) : base(options)
+        {
+
+        }
+        public DbSet<Product> Products { get; set; }
+        public DbSet<ProductCategory> ProductCategories { get; set; }
     }
 }
