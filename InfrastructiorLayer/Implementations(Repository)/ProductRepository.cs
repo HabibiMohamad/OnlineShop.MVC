@@ -1,4 +1,4 @@
-﻿using DomailLayer.Domain;
+﻿using DomainLayer.Domain;
 using DomainLayer.DomainServices.Repositories.Contracts;
 
 namespace InfrastructureLayer.Implementations_Repository_

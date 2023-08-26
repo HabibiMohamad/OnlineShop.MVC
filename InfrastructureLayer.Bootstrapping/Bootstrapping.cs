@@ -1,6 +1,5 @@
 ﻿using ApplicationLayer.UseCases.Contracts;
 using ApplicationLayer.UseCases.Implementations;
-using DomailLayer.DomainServices.Repositories.Contracts; // Chere 2 tas ??
 using DomainLayer.DomainServices.Repositories.Contracts; // Chere 2 tas ??
 using InfrastructureLayer.Implementations_Repository_;
 using Microsoft.EntityFrameworkCore;

@@ -1,9 +1,7 @@
 ﻿using ApplicationLayer.Dtos.ProductCategoryDtos;
 using ApplicationLayer.UseCases.Contracts;
-using DomailLayer.Domain;
-using DomailLayer.DomainServices.Repositories.Contracts;
-
-
+using DomainLayer.Domain;
+using DomainLayer.DomainServices.Repositories.Contracts;
 
 namespace ApplicationLayer.UseCases.Implementations
 {

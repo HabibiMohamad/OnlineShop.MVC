@@ -1,12 +1,7 @@
 ﻿using ApplicationLayer.Dtos.ProductDtos;
 using ApplicationLayer.UseCases.Contracts;
-using DomailLayer.Domain;
+using DomainLayer.Domain;
 using DomainLayer.DomainServices.Repositories.Contracts;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ApplicationLayer.UseCases.Implementations
 {

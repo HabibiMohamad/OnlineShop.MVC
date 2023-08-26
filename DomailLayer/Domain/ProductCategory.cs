@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DomailLayer.Domain
+namespace DomainLayer.Domain
 {
     // Many
     public class ProductCategory

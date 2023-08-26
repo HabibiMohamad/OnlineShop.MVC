@@ -1,11 +1,11 @@
-﻿using DomailLayer.Domain;
-using DomailLayer.DomainServices.Repositories.Contracts;
+﻿using DomainLayer.Domain;
+using DomainLayer.DomainServices.Repositories.Contracts;
 
 namespace InfrastructureLayer.Implementations_Repository_
 {
     public class ProductCategoryRepository : IProductCategoryRepository
     {
-        private readonly OnlineShopDbContext _dbContext:
+        private readonly OnlineShopDbContext _dbContext;
         public ProductCategoryRepository(OnlineShopDbContext dbContext)
         {
             _dbContext = dbContext;

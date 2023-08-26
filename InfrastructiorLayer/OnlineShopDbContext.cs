@@ -1,4 +1,4 @@
-﻿using DomailLayer.Domain;
+﻿using DomainLayer.Domain;
 using Microsoft.EntityFrameworkCore;
 
 namespace InfrastructureLayer
