@@ -4,8 +4,11 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-var connectionstring = builder.Configuration.GetConnectionString("Defalt");
+
+
+var connectionstring = builder.Configuration.GetConnectionString("Default");
 Bootstrapping.WireUp(builder.Services, connectionstring);
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

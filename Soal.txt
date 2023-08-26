@@ -1,2 +1,10 @@
 اول باید پیاده سازی کنیم یا ایجاد کنیم ؟؟؟؟
+
+
+Aval Contract ya aval Implementation
+Aval Contract !!
+
+
 UseCases چیه ؟؟؟
+
+Business
