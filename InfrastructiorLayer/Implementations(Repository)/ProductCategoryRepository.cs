@@ -1,7 +1,7 @@
 ﻿using DomainLayer.Domain;
 using DomainLayer.DomainServices.Repositories.Contracts;
 
-namespace InfrastructureLayer.Implementations_Repository_
+namespace InfrastructureLayer.Implementations_Repository
 {
     public class ProductCategoryRepository : IProductCategoryRepository
     {

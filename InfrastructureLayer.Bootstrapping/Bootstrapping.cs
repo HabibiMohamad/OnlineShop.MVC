@@ -1,7 +1,7 @@
 ﻿using ApplicationLayer.UseCases.Contracts;
 using ApplicationLayer.UseCases.Implementations;
-using DomainLayer.DomainServices.Repositories.Contracts; // Chere 2 tas ??
-using InfrastructureLayer.Implementations_Repository_;
+using DomainLayer.DomainServices.Repositories.Contracts; 
+using InfrastructureLayer.Implementations_Repository;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -15,13 +15,12 @@ namespace InfrastructureLayer.Bootstrapping
             {
                 option.UseSqlServer(connectionString);
             });
+
             service.AddScoped<IProductRepository, ProductRepository>();
             service.AddScoped<IProductCategoryRepository, ProductCategoryRepository>();
 
             service.AddScoped<IProductUseCase, ProductUseCase>();
-            service.AddScoped<IProductCategoryUseCase, ProductCategoryUseCase>();
-            
-            
+            service.AddScoped<IProductCategoryUseCase, ProductCategoryUseCase>();              
         }
     }
 }
