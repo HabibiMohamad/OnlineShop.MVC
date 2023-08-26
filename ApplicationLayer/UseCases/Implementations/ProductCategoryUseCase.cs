@@ -28,7 +28,7 @@ namespace ApplicationLayer.UseCases.Implementations
             }
             return listDto;        
         }
-        public Detail_ProductCategoryDetailDto Detail(int id)
+        public Detail_ProductCategoryDetailDto GetDetail(int id)
         {
             var productCategory = _repository.GetById(id);
             var dto= new Detail_ProductCategoryDetailDto();
@@ -40,12 +40,11 @@ namespace ApplicationLayer.UseCases.Implementations
         public void Create(Create_ProductCategoryDto dto)
         {
             var productCategory=new ProductCategory();
-            productCategory.Id = dto.Id;
             productCategory.Title = dto.Title;
             productCategory.Description = dto.Description;
             _repository.Add(productCategory);
         }
-        public void Update (Uppdate_ProductCategoyDto dto)
+        public void Update (Update_ProductCategoyDto dto)
         {
             var productCategory=new ProductCategory();
             productCategory.Id=dto.Id;
@@ -57,6 +56,19 @@ namespace ApplicationLayer.UseCases.Implementations
         public void Delete(int id)
         {
             _repository.Remove(id);
+        }
+
+        //Get mikone baraye namayesh Form Edit
+        public Update_ProductCategoyDto GetEdit(int id)
+        {
+            var productCategory = _repository.GetById(id);
+
+            var dto = new Update_ProductCategoyDto();
+            dto.Id = productCategory.Id;
+            dto.Title = productCategory.Title;
+            dto.Description = productCategory.Description;
+
+            return dto;
         }
     }
 

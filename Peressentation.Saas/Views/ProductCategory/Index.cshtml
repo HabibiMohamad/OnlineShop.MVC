@@ -1,0 +1,49 @@
+﻿@model List<ApplicationLayer.Dtos.ProductCategoryDtos.GetAllForGrid_ProductCategoryDto>
+
+<a asp-controller="ProductCategory" asp-action="Create" class="btn btn-primary">Create</a>
+
+<br />
+
+<table class="table table-bordered">
+    <tr>
+        <th>Id</th>
+        <th>Title</th>
+        <th>Commands</th>
+    </tr>
+    @foreach (var productCategory in Model)
+    {
+        <tr>
+            <td>@productCategory.Id</td>
+            <td>@productCategory.Title</td>
+            <td>
+                <a asp-controller="ProductCategory" asp-action="Detail" asp-route-id="@productCategory.Id" class="btn btn-primary">Detail</a>
+                <a asp-controller="ProductCategory" asp-action="Edit" asp-route-id="@productCategory.Id" class="btn btn-warning">Edit</a>
+                <a asp-controller="productCategory" asp-action="Delete" asp-route-id="@productCategory.Id" class="btn btn-danger">Delete</a>
+            </td>
+        </tr>
+    }
+</table>
+
+
+
+----------------------------------------------------------------------------------------------------------------------
+
+@foreach (var productCategory in Model)
+{
+    <div class="row" style="display:inline-block;">
+        <div class="col-sm-3">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">@productCategory.Title</h5>
+                    <p class="card-text">@productCategory.Title</p>
+                    <a asp-controller="ProductCategory" asp-action="Detail" asp-route-id="@productCategory.Id" class="btn btn-primary">Go @productCategory.Id</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+}
+
+
+
+
