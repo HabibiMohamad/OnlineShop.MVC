@@ -18,7 +18,7 @@ namespace Peressentation.Saas.Controllers
             var listDto=_service.GetAllForGrid();
             return View(listDto);
         }
-        public IActionResult Details(int id)
+        public IActionResult Detail(int id)
         {
             var dto = _service.Detail(id);
             return View(dto);

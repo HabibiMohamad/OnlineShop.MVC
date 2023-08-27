@@ -1,5 +1,26 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
+﻿@model List<ApplicationLayer.Dtos.ProductDtos.GetAllForGrid_ProductDto>
+
+<a asp-controller="Product" asp-action="Create" class="btn btn-primary">Create</a>
+
+<br />
+
+<table class="table table-bordered">
+    <tr>
+        <th>Id</th>
+        <th>Title</th>
+        <th>UnitPrice</th>
+        <th>Price</th>
+    </tr>
+    @foreach(var product in Model)
+    {
+        <tr>
+            <td>@product.Id</td>
+            <td>@product.Title</td>
+            <td>
+                <a asp-controller="Product" asp-action="Detail" asp-route-id="@product.Id" class="btn btn-primary">Detail</a>
+                <a asp-controller="Product" asp-action="Edit" asp-route-id="@product.Id" class="btn btn-warning">Edit</a>
+                <a asp-controller="Product" asp-action="Delete" asp-route-id="@product.Id" class="btn btn-danger">Delete</a>
+            </td>
+        </tr>
+    }
+</table>
