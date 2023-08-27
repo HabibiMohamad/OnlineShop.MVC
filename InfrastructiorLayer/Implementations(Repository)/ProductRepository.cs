@@ -15,6 +15,7 @@ namespace InfrastructureLayer.Implementations_Repository
         public void Add(Product product)
         {
             _dbContext.Products.Add(product);
+            _dbContext.SaveChanges();
         }
 
         public List<Product> GetAll()
@@ -31,17 +32,20 @@ namespace InfrastructureLayer.Implementations_Repository
         public void Remove(Product product)
         {
             _dbContext.Products.Remove(product);
+            _dbContext.SaveChanges();
         }
 
         public void Remove(int id)
         {
             var product =_dbContext.Products.Find(id);
             _dbContext.Products.Remove(product);
+            _dbContext.SaveChanges();
         }
 
         public void Update(Product product)
         {
             _dbContext.Products.Update(product);
+            _dbContext.SaveChanges();
         }
     }
 }
