@@ -47,7 +47,7 @@ namespace ApplicationLayer.UseCases.Implementations
             return listDto;
         }
 
-        public void Update(Uppdate_ProductDto dto)
+        public void Update(Update_ProductDto dto)
         {
             var product=new Product();
             product.Id = dto.Id;
@@ -59,6 +59,19 @@ namespace ApplicationLayer.UseCases.Implementations
         public void Delete(int id)
         {
             _repository.Remove(id);
+        }
+
+        public Update_ProductDto GetEdit(int id)
+        {
+            var product = _repository.GetById(id);
+
+            var dto=new Update_ProductDto();
+            dto.Id = product.Id;
+            dto.Title = product.Title;
+            dto.UnitPrice = product.UnitPrice;
+            dto.Price = product.Price;
+
+            return dto;
         }
     }
 }

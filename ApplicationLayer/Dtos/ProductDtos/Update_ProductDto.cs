@@ -1,6 +1,6 @@
 ﻿namespace ApplicationLayer.Dtos.ProductDtos
 {
-    public class Uppdate_ProductDto
+    public class Update_ProductDto
     {
         public int Id { get; set; }
         public string Title { get; set; }
