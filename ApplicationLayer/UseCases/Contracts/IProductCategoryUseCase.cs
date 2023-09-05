@@ -9,19 +9,15 @@ namespace ApplicationLayer.UseCases.Contracts
 {
     public interface IProductCategoryUseCase
     {
-        void Create(Create_ProductCategoryDto dto);
+        List<GetAllForGrid_ProductCategoryDto> GetAllForGrid();
+        List<GetAllForGrid_ProductCategoryDto> GetAllForBox();
 
+        void Create(Create_ProductCategoryDto dto);
 
 
         Detail_ProductCategoryDetailDto GetDetail (int  id);
 
-
-
-        List<GetAllForGrid_ProductCategoryDto> GetAllForGrid ();
-
-
         void Delete(int id);
-
 
         Update_ProductCategoyDto GetEdit(int id);
         void Update(Update_ProductCategoyDto dto);

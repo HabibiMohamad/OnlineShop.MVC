@@ -1,15 +1,49 @@
 ﻿@model ApplicationLayer.Dtos.ProductCategoryDtos.Create_ProductCategoryDto
 
 
-<form asp-controller="ProductCategory" asp-action="Create">
+<form id="myform" asp-controller="ProductCategory" asp-action="Create">
     <div class="form-group">
         <label asp-for="Title"></label>
-        <input asp-for="Title" class="form-control" >
+        <input asp-for="Title" class="form-control">
+        <span class="text-danger" asp-validation-for="Title"></span>
     </div>
 
     <div class="form-group">
         <label asp-for="Description"></label>
         <input asp-for="Description" class="form-control">
+        <span class="text-danger" asp-validation-for="Description"></span>
+
     </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" class="btn btn-primary" onclick="test(event)">Submit</button>
 </form>
+
+<script>
+    //function test(e) {
+    //    window.alert("hello");
+
+    //    // dar edame kar haye pishvarz ra anjam nade
+    //    // kar pishfarz chie = submit form
+    //    event.preventDefault()
+    //}
+
+    //$(document).ready(function () {
+    //    $("#myform").validate({
+    //        rules: {
+    //            Title: "required",
+    //            Description: "required",
+    //            //email: {
+    //            //    required: true,
+    //            //    email: true
+    //            //}
+    //        },
+    //        messages: {
+    //            Title: "Please specify your name",
+    //            Description: "Please specify your name",
+    //            //email: {
+    //            //    required: "We need your email address to contact you",
+    //            //    email: "Your email address must be in the format of name@domain.com"
+    //            //}
+    //        }
+    //    });
+    }
+</script>

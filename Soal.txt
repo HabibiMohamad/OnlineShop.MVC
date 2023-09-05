@@ -10,3 +10,24 @@ UseCases چیه ؟؟؟
 Business
 
 Contract ها بررسی شود 
+
+چجوری لایه Domain رو از لایه DomainService جدا کنیم ؟
+
+این پروژه چند لابه هست ؟؟
+
+چرا  بوت استرپینگ تو یه کلاس لایبری زده شده ؟؟
+چرا آنلاین شاپ دی بی تو کلاس لایبری یا فولدر نیست ؟؟
+
+کانستراکتور ها چرا یه جا دیگه رو صدا میزنن ؟؟
+
+
+1-ServerSide validation=>samte server ya hamun code C# (asp)
+2-ClientSide validation =>samte client ya hamun html ( ba code javascript mizanan, vali
+microsoft ketabkhune komaki annotation ra juri nevseshte ke ham server side va ham clientside
+ra handle konad) be sharti ke ketabkhune haye js zir ra dakhel layout ezafe koni
+
+Tartib Validation ClientSide
+0- jquery.min.js
+1- jquery.validate.js
+2- additional-methods.js
+3- jquery.validate.unobtrusive.js

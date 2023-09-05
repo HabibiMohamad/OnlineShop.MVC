@@ -1,4 +1,4 @@
-﻿    using ApplicationLayer.Dtos.ProductCategoryDtos;
+﻿using ApplicationLayer.Dtos.ProductCategoryDtos;
 using ApplicationLayer.UseCases.Contracts;
 using DomainLayer.Domain;
 using DomainLayer.DomainServices.Repositories.Contracts;
@@ -7,6 +7,7 @@ namespace ApplicationLayer.UseCases.Implementations
 {
     public class ProductCategoryUseCase : IProductCategoryUseCase
     {
+        // یک نمونه از کلاس ریپازیتوری
         private readonly IProductCategoryRepository _repository;
 
         public ProductCategoryUseCase(IProductCategoryRepository repository)
@@ -69,6 +70,11 @@ namespace ApplicationLayer.UseCases.Implementations
             dto.Description = productCategory.Description;
 
             return dto;
+        }
+
+        public List<GetAllForGrid_ProductCategoryDto> GetAllForBox()
+        {
+            throw new NotImplementedException();
         }
     }
 

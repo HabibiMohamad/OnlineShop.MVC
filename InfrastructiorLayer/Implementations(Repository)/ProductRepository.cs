@@ -1,5 +1,6 @@
 ﻿using DomainLayer.Domain;
 using DomainLayer.DomainServices.Repositories.Contracts;
+using Microsoft.EntityFrameworkCore;
 
 namespace InfrastructureLayer.Implementations_Repository
 {
@@ -20,7 +21,7 @@ namespace InfrastructureLayer.Implementations_Repository
 
         public List<Product> GetAll()
         {
-            var products = _dbContext.Products.ToList();
+            var products = _dbContext.Products.Include(e=>e.ProductCategory).ToList();
             return products;
         }
 

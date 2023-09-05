@@ -9,11 +9,12 @@ namespace ApplicationLayer.UseCases.Contracts
 {
     public interface IProductUseCase
     {
+        List<GetAllForGrid_ProductDto> GetAllForGrid();
+
         void Create(Create_ProductDto dto);
 
         Detail_ProductDetailDto Detail(int id);
 
-        List<GetAllForGrid_ProductDto> GetAllForGrid();
 
         Update_ProductDto GetEdit(int id);
         void Update(Update_ProductDto dto);

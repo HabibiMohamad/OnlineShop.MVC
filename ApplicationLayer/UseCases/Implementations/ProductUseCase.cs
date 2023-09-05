@@ -16,32 +16,41 @@ namespace ApplicationLayer.UseCases.Implementations
         {
             var product = new Product();
             product.Id = dto.Id;
-            product.Title= dto.Title;
-            product.UnitPrice= dto.UnitPrice;
-            product.Price= dto.Price;
+            product.Title = dto.Title;
+            product.UnitPrice = dto.UnitPrice;
+            product.Price = dto.Price;
+            product.ProductCategoryId = dto.ProductCategoryId;
             _repository.Add(product);
         }
 
         public Detail_ProductDetailDto Detail(int id)
         {
-            var product=_repository.GetById(id);
-            var dto=new Detail_ProductDetailDto();
+            var product = _repository.GetById(id);
+            var dto = new Detail_ProductDetailDto();
             dto.Id = product.Id;
             dto.Title = product.Title;
             dto.UnitPrice = product.UnitPrice;
             dto.Price = product.Price;
+            dto.ProductCategoryId = product.ProductCategoryId;
             return dto;
         }
 
         public List<GetAllForGrid_ProductDto> GetAllForGrid()
         {
             List<Product> products = _repository.GetAll();
-            var listDto=new List<GetAllForGrid_ProductDto>();
+            
+            // نکته ریز دارد
+            // hatman bayad product ro be productCategory ba Include kardan vasl konam
+            // ta NavigationProperty Product=>ProductCategory Por beshe
+            var listDto = new List<GetAllForGrid_ProductDto>();
             foreach (var product in products)
             {
-                var dto=new GetAllForGrid_ProductDto();
+                var dto = new GetAllForGrid_ProductDto();
                 dto.Id = product.Id;
                 dto.Title = product.Title;
+                dto.UnitPrice = product.UnitPrice;
+                dto.Price = product.Price;
+                dto.ProductCategoryTitle = product.ProductCategory.Title;
                 listDto.Add(dto);
             }
             return listDto;
@@ -49,11 +58,13 @@ namespace ApplicationLayer.UseCases.Implementations
 
         public void Update(Update_ProductDto dto)
         {
-            var product=new Product();
+            var product = new Product();
             product.Id = dto.Id;
             product.Title = dto.Title;
             product.UnitPrice = dto.UnitPrice;
             product.Price = dto.Price;
+            product.ProductCategoryId = dto.ProductCategoryId;
+
             _repository.Update(product);
         }
         public void Delete(int id)
@@ -65,11 +76,12 @@ namespace ApplicationLayer.UseCases.Implementations
         {
             var product = _repository.GetById(id);
 
-            var dto=new Update_ProductDto();
+            var dto = new Update_ProductDto();
             dto.Id = product.Id;
             dto.Title = product.Title;
             dto.UnitPrice = product.UnitPrice;
             dto.Price = product.Price;
+            dto.ProductCategoryId = product.ProductCategoryId;
 
             return dto;
         }

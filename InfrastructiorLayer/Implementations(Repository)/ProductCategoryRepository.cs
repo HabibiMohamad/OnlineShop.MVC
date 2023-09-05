@@ -5,7 +5,9 @@ namespace InfrastructureLayer.Implementations_Repository
 {
     public class ProductCategoryRepository : IProductCategoryRepository
     {
+        // یک نمونه از DbContext
         private readonly OnlineShopDbContext _dbContext;
+
         public ProductCategoryRepository(OnlineShopDbContext dbContext)
         {
             _dbContext = dbContext;

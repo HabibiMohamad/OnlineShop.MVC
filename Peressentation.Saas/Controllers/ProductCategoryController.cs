@@ -6,8 +6,10 @@ namespace Peressentation.Saas.Controllers
 {
     public class ProductCategoryController : Controller
     {
+        // یک نمونه از applicationservice یا همون UseCase
         private readonly IProductCategoryUseCase _service;
 
+        // injection ya tazrigh == new
         public ProductCategoryController(IProductCategoryUseCase service)
         {
             _service = service;
@@ -42,8 +44,17 @@ namespace Peressentation.Saas.Controllers
         [HttpPost]
         public IActionResult Create(Create_ProductCategoryDto dto)
         {
-            _service.Create(dto);
-            return RedirectToAction("Index"); // shabi be refresh
+            if (ModelState.IsValid)
+            {
+                _service.Create(dto);
+                return RedirectToAction("Index"); // shabi be refresh
+
+            }
+            else
+            {
+                return View(dto);
+
+            }
         }
 
         [HttpGet]
@@ -56,8 +67,15 @@ namespace Peressentation.Saas.Controllers
         [HttpPost]
         public IActionResult Edit(Update_ProductCategoyDto dto)
         {
-            _service.Update(dto);
-            return RedirectToAction("Index"); // shabi be refresh
+            if (ModelState.IsValid)
+            {
+                _service.Update(dto);
+                return RedirectToAction("Index"); // shabi be refresh
+            }
+            else
+            {
+                return View("Edit",dto);
+            }
         }
     }
 }
